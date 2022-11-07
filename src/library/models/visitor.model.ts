@@ -1,3 +1,4 @@
+import { DataTypes } from "sequelize";
 import {
     AfterCreate,
     Column,
@@ -14,8 +15,8 @@ export class Visitor extends Model {
   @Column
       id: number;
 
-  @Column
-      data: string;
+  @Column({ type: DataTypes.JSON})
+      data: JSON;
 
   @Column
       ip: string;

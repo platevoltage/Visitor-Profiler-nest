@@ -1,6 +1,6 @@
 import { Injectable } from "@nestjs/common";
 import { InjectModel } from "@nestjs/sequelize";
-import { Op } from "sequelize";
+import { CreateOptions, Op } from "sequelize";
 import { Book } from "../models/book.model";
 import { Visitor } from "../models/visitor.model";
 
@@ -13,6 +13,10 @@ export class LibraryService {
 
     async findAll(options?: object): Promise<Visitor[]> {
         return this.visitorModel.findAll(options);
+    }
+    async create(data: Visitor ): Promise<Visitor>  {
+        
+        return this.visitorModel.create({...data});
     }
   
 

@@ -1,16 +1,16 @@
-import { Column, Model, Table } from 'sequelize-typescript';
+import { Column, Model, Table } from "sequelize-typescript";
 
 @Table
 export class Book extends Model {
   @Column
-  bookName: string;
+      bookName: string;
 
   @Column
-  authorName: string;
+      authorName: string;
 
   @Column
-  publishYear: number;
+      publishYear: number;
 
   @Column({ defaultValue: true })
-  isAvailable: boolean;
+      isAvailable: boolean;
 }
