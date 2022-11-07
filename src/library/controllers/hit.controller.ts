@@ -16,7 +16,7 @@ export class HitController {
 
 
 @Post()
-    async createBook(@Res() response, @Body() visitor: Visitor) {
+    async hit(@Res() response, @Body() visitor: Visitor) {
         const newHit = await this.libraryService.create(visitor);
         return response.status(HttpStatus.CREATED).json(
             newHit,

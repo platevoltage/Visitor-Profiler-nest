@@ -15,11 +15,21 @@ export class LibraryService {
         return this.visitorModel.findAll(options);
     }
     async findOne(id: string): Promise<Visitor> {
-        return this.visitorModel.findOne({
-            where: {
-                id,
-            },
+        return this.visitorModel.findByPk(id ,{
+            
         });
+    }
+    async hide(id: string) {
+        return this.visitorModel.update(
+            { hidden: true },
+            { where: {id} }, 
+        );
+    }
+    async show(id: string) {
+        return this.visitorModel.update(
+            { hidden: false },
+            { where: {id} }, 
+        );
     }
     async create(data: Visitor ): Promise<Visitor>  {
         
