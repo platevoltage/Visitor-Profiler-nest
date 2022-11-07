@@ -11,11 +11,11 @@ import {
 } from "@nestjs/common";
 import { Op } from "sequelize";
 import { Visitor } from "../models/visitor.model";
-import { LibraryService } from "../services/library.service";
+import { VisitorsService } from "../services/visitors.service";
   
 @Controller("data")
 export class DataController {
-    constructor(private readonly libraryService: LibraryService) {}
+    constructor(private readonly libraryService: VisitorsService) {}
   
     @Get()
     async findAllAndParse(@Query() query, @Res() res) {

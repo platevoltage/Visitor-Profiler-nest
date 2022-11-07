@@ -3,7 +3,7 @@ import { InjectModel } from "@nestjs/sequelize";
 import { Visitor } from "../models/visitor.model";
 
 @Injectable()
-export class LibraryService {
+export class VisitorsService {
     constructor(
         @InjectModel(Visitor)
         private visitorModel: typeof Visitor,

@@ -8,11 +8,11 @@ import {
     Res,
 } from "@nestjs/common";
 import { Visitor } from "../models/visitor.model";
-import { LibraryService } from "../services/library.service";
+import { VisitorsService } from "../services/visitors.service";
 
 @Controller("hit")
 export class HitController {
-    constructor(private readonly libraryService: LibraryService) {}
+    constructor(private readonly libraryService: VisitorsService) {}
 
 
 @Post()

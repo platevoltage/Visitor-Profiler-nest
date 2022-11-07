@@ -7,11 +7,11 @@ import {
     Post,
     Res,
 } from "@nestjs/common";
-import { LibraryService } from "../services/library.service";
+import { VisitorsService } from "../services/visitors.service";
 
 @Controller("raw")
 export class RawController {
-    constructor(private readonly libraryService: LibraryService) {}
+    constructor(private readonly libraryService: VisitorsService) {}
 
     @Get()
     async findAll(@Res() response) {
