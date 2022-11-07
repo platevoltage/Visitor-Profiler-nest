@@ -6,6 +6,7 @@ import { Visitor } from "./models/visitor.model";
 import { LibraryService } from "./services/library.service";
 import { HitController } from "./controllers/hit.controller";
 import { HideController, ShowController } from "./controllers/hideShow.controller";
+import { CountController } from "./controllers/count.controller";
 
 @Module({
     imports: [SequelizeModule.forFeature([Visitor])],
@@ -15,7 +16,8 @@ import { HideController, ShowController } from "./controllers/hideShow.controlle
         DataController,
         HitController,
         HideController,
-        ShowController
+        ShowController,
+        CountController
     ],
 })
 export class LibraryModule {}

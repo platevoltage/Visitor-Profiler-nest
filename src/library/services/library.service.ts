@@ -1,7 +1,5 @@
 import { Injectable } from "@nestjs/common";
 import { InjectModel } from "@nestjs/sequelize";
-import { CreateOptions, Op } from "sequelize";
-import { Book } from "../models/book.model";
 import { Visitor } from "../models/visitor.model";
 
 @Injectable()
@@ -18,6 +16,9 @@ export class LibraryService {
         return this.visitorModel.findByPk(id ,{
             
         });
+    }
+    async count(): Promise<number> {
+        return this.visitorModel.count({});
     }
     async hide(id: string) {
         return this.visitorModel.update(
