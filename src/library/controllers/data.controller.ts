@@ -13,7 +13,7 @@ import { Op } from "sequelize";
 import { Visitor } from "../models/visitor.model";
 import { LibraryService } from "../services/library.service";
   
-  @Controller("data")
+@Controller("data")
 export class DataController {
     constructor(private readonly libraryService: LibraryService) {}
   
