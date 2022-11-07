@@ -22,20 +22,4 @@ export class HitController {
             newHit,
         );
     }
-
-    //   @Get()
-    //   async fetchAll(@Res() response) {
-    //     const books = await this.libraryService.findAll();
-    //     return response.status(HttpStatus.OK).json({
-    //       books,
-    //     });
-    //   }
-
-    //   @Get('/:id')
-    //   async findById(@Res() response, @Param('id') id) {
-    //     const book = await this.libraryService.findOne(id);
-    //     return response.status(HttpStatus.OK).json({
-    //       book,
-    //     });
-    //   }
 }
