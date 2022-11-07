@@ -7,9 +7,10 @@
   "license": "UNLICENSED",
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "nest build && npm run build-frontend",
+    "build": "nest build && npm run pull-frontend && npm run build-frontend",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "build-frontend": "cd src/views && npm i && npm run build ",
+    "pull-frontend": "cd src && svn checkout https://github.com/platevoltage/Visitor-Profiler/trunk/src/views",
     "start": "nest start",
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
