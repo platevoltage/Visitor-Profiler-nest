@@ -5,17 +5,15 @@ import { Visitor } from "../models/visitor.model";
 @Injectable()
 export class LibraryService {
     constructor(
-    @InjectModel(Visitor)
-    private visitorModel: typeof Visitor,
+        @InjectModel(Visitor)
+        private visitorModel: typeof Visitor,
     ) {}
 
     async findAll(options?: object): Promise<Visitor[]> {
         return this.visitorModel.findAll(options);
     }
     async findOne(id: string): Promise<Visitor> {
-        return this.visitorModel.findByPk(id ,{
-            
-        });
+        return this.visitorModel.findByPk(id, {});
     }
     async count(): Promise<number> {
         return this.visitorModel.count({});
