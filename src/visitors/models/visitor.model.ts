@@ -11,16 +11,17 @@ import {
     tableName: "visitor",
 })
 export class Visitor extends Model {
-  @PrimaryKey
-  @Column
-      id: number;
+    declare created_at: string;
+    @PrimaryKey
+    @Column
+        id: number;
 
-  @Column({ type: DataTypes.JSON})
-      data: JSON;
+    @Column({ type: DataTypes.JSON})
+        data: JSON;
 
-  @Column
-      ip: string;
+    @Column
+        ip: string;
 
-  @Column({ defaultValue: false })
-      hidden: boolean;
+    @Column({ defaultValue: false })
+        hidden: boolean;
 }
