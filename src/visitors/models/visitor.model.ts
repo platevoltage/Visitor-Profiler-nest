@@ -11,7 +11,8 @@ import {
     tableName: "visitor",
 })
 export class Visitor extends Model {
-    declare created_at: string;
+    declare created_at: Date;
+
     @PrimaryKey
     @Column
         id: number;
