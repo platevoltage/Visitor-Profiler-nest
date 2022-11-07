@@ -1,6 +1,5 @@
 import { DataTypes } from "sequelize";
 import {
-    AfterCreate,
     Column,
     Model,
     PrimaryKey,

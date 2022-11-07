@@ -1,10 +1,7 @@
 import {
-    Body,
     Controller,
     Get,
     HttpStatus,
-    Param,
-    Post,
     Res,
 } from "@nestjs/common";
 import { VisitorsService } from "../services/visitors.service";
@@ -20,6 +17,4 @@ export class CountController {
             await this.libraryService.count()
         );
     }
-
-
 }
