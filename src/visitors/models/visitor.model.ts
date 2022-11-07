@@ -17,7 +17,7 @@ export class Visitor extends Model {
     @Column
         id: number;
 
-    @Column({ type: DataTypes.JSON})
+    @Column({ type: DataTypes.JSON })
         data: JSON;
 
     @Column
