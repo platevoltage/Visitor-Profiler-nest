@@ -1,6 +1,7 @@
 import { DataTypes } from "sequelize";
 import {
     Column,
+    Default,
     Model,
     PrimaryKey,
     Table,
@@ -22,6 +23,7 @@ export class Visitor extends Model {
     @Column
         ip: string;
 
-    @Column({ defaultValue: false })
+    @Default(false)
+    @Column
         hidden: boolean;
 }
