@@ -14,6 +14,13 @@ export class LibraryService {
     async findAll(options?: object): Promise<Visitor[]> {
         return this.visitorModel.findAll(options);
     }
+    async findOne(id: string): Promise<Visitor> {
+        return this.visitorModel.findOne({
+            where: {
+                id,
+            },
+        });
+    }
     async create(data: Visitor ): Promise<Visitor>  {
         
         return this.visitorModel.create({...data});

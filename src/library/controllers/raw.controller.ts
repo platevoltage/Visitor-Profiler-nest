@@ -13,12 +13,18 @@ import { LibraryService } from "../services/library.service";
 export class RawController {
     constructor(private readonly libraryService: LibraryService) {}
 
-  @Get()
+    @Get()
     async findAll(@Res() response) {
         const visitors = await this.libraryService.findAll();
         return response.status(HttpStatus.OK).json(
             visitors,
         );
+    }
+
+    @Get("/:id")
+    async findById(@Res() response, @Param("id") id) {
+        const visitor = await this.libraryService.findOne(id);
+        return response.status(HttpStatus.OK).json(visitor);
     }
 
     //   @Post()
