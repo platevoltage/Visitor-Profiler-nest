@@ -54,8 +54,8 @@ export class DataController {
                 hidden: visitor.hidden,
                 id: visitor.id,
                 ip: visitor.ip,
-                time: new Date(visitor.createdAt).toLocaleString(),
-                unixTime: new Date(visitor.createdAt).getTime(),  
+                time: new Date(visitor.created_at).toLocaleString(),
+                unixTime: new Date(visitor.created_at).getTime(),  
             };
             return {
                 ...data,
